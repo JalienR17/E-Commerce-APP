@@ -1,0 +1,111 @@
+.cartoon {
+  width: clamp(4rem, 8rem, 8rem);
+  height: clamp(4rem, 8rem, 8rem);
+  position: absolute;
+  top: 15rem;
+  left: calc(50vw - 4rem);
+  z-index:100;
+  aspect-ratio: 1/1;
+}
+
+.cartoon:hover {
+  filter: drop-shadow(0 0 2em #FF7043);
+}
+.cartoon.react:hover {
+  filter: drop-shadow(0 0 2em #FFEE58);
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #FFEE58 0%, #FF7043 70%);
+  box-shadow: 0 0 20px rgba(255,238,88,0.8), 0 0 30px rgba(255,112,67,0.7);
+  border-radius: 50%;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+
+/* Container for the eyes */
+.eyes {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+/* Each eye is a small, black dot */
+.eye {
+  width: 0.8em;
+  height: 1.5em;
+  background-color: #000;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.mouth {
+  position: absolute;
+  bottom: 16.66%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 25%;
+  border: transparent;
+  border-top: none;
+  border-bottom: 1.1em solid #000;
+  border-radius: 0 0 50% 50%;
+  animation: mouth 1s infinite ease-in-out;
+  aspect-ratio: 1/1;
+}
+
+/* bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mouth {
+ 0% {
+   border-bottom: 0.5em solid #000;
+ }
+ 50% {
+   border-bottom: 1.1em solid #000;
+ }
+ 100% {
+   border-bottom: 0.5em solid #000;
+ }
+}
+
+@keyframes orbit {
+  0% {
+    transform: translate(0, 0) rotate(30deg);
+  }
+  25% {
+    transform: translate(400%, 100%) rotate(30deg);
+  }
+  50% {
+    transform: translate(0%, 500%) rotate(-30deg);
+  }
+  75% {
+    transform: translate(-400%, 100%) rotate(30deg);
+  }
+  100% {
+    transform: translate3d(0, 0) rotate(-30deg);
+  }
+}
+
+
+@media (min-width: 200px) and (max-width: 699px) {
+ .cartoon {
+   top: 25rem;
+   aspect-ratio: 1/1;
+ }
+}

@@ -1,0 +1,111 @@
+/* Overall product card container */
+.product-card {
+  width: 300px;
+  margin: 20px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header styling */
+.product-card-header {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Flip container styling */
+.flip-card-container {
+  perspective: 1000px; /* Enables 3D flip effect */
+  height: 300px; /* adjust based on your preferred image/description area */
+  position: relative;
+  overflow: hidden;
+}
+
+/* The flip card itself */
+.flip-card {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+
+.product-card:hover .flip-card {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #f0f0f0;
+  transform: rotateY(180deg);
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer styling with price and button */
+.product-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Price styling */
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Button styling */
+.add-to-cart-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.add-to-cart-btn:hover {
+  background-color: darkorange;
+}

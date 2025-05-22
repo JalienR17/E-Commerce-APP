@@ -1,0 +1,15 @@
+.header3d {
+  margin: 2rem 0;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.header3d h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.15), 4px 4px 0 rgba(0,0,0,0.1), 6px 6px 0 rgba(0,0,0,0.05);
+}
