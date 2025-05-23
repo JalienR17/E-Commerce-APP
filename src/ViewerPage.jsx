@@ -22,9 +22,9 @@ const ViewerPage = () => {
     <div className="viewer-page" style={{ padding: "1rem" }}>
       <div>
           <b>3D Controls</b>
-          <p>Right Click: Grab </p>
-          <p>Left Click: Spin </p>
-          <p>Scroll Wheel: Zoom  </p>
+          <p>Right Click / Two Fingers: Grab </p>
+          <p>Left Click / One Finger: Spin </p>
+          <p>Scroll Wheel / Pinch: Zoom  </p>
       </div>
       {/* 3D Viewer Section */}
       <div
